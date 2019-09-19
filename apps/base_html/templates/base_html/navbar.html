@@ -23,8 +23,6 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{% url 'bill_tracker:index' %}">Bill Tracker</a>
                         <a class="dropdown-item" href="{% url 'project_manager:index' %}">Project Manager</a>
-                        <a class="dropdown-item" href="{% url 'litle_quote:index' %}">Lil Quote</a>
-                        <a class="dropdown-item" href="{% url 'tv_show:index' %}">TV Show</a>
                     </div>
                 </li>
                 {% if request.session.name %}
@@ -42,15 +40,6 @@
                     <a class="nav-link" href="{% url 'auth_user:index' %}">Signin / Signup</a>
                 </li>
                 {% endif %}
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <form class="form-inline my-2 my-lg-0" action="{% url 'litle_quote:search_by_user_or_email' %}" method="POST">
-                        {% csrf_token %}
-                        <input class="form-control mr-sm-2" type="search" name="html_query" placeholder="Search user" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </li>
             </ul>
         </div>
     </div>
